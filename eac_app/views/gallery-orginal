@@ -1,0 +1,122 @@
+{{#contentFor 'headersrc'}}<img src="/assets/img/gallery-hd-ft.jpg" class="bg-header" alt="Seema Gill">{{/contentFor}}
+{{#contentFor 'footersrc'}}<img src="/assets/img/gallery-hd-ft.jpg" class="bg-footer" alt="Seema Gill">{{/contentFor}}
+
+<!-- <script src="/assets/js/galleryLoad.js"></script>-->
+<script src="/assets/js/hogan-2.0.0"></script>
+<script src="/assets/js/jquery-1.9.1.min.js"></script>
+<script src="/assets/js/typeahead.js"></script>
+<script src="/assets/js/examples.js"></script>
+
+	<div class="container-content" style="">
+
+		<!-- <h1 class="title">examples</h1>
+
+      <div class="example example-countries">
+        <h2 class="example-name">Countries</h2>
+        <p class="example-description">Prefetches data, stores it in localStorage, and searches it on the client</p>
+
+        <div class="demo">
+          <input class="typeahead" type="text" placeholder="countries">
+        </div>
+
+      </div> -->
+
+			<div class="row">
+				<div class="small-12 large-12 columns">
+				<h2>Entrant Gallery</h2>
+				<p> Welcome to EAC's unique online image gallery containing [auto updated number] works
+			    submitted by entrants since 2003. You can filter by year, artist, and category. Additionally,
+			    you can view works chosen as finalists' and switch to live entries coming in for this years
+			    competition. </p> 
+			</div>
+			
+			<div class="row filter-search">
+				<div class="large-12 columns">
+					<a href="#" data-dropdown="year-dropdown" class="button split secondary">2012<span></span></a>
+							<!--<ul id="year-dropdown" class="f-dropdown" data-dropdown-content>
+							<li><a href="#">2003</a></li>
+							<li><a href="#">2004</a></li>
+							<li><a href="#">2005</a></li>
+							<li><a href="#">2006</a></li>
+							<li><a href="#">2007</a></li>
+							<li><a href="#">2008</a></li>
+							<li><a href="#">2009</a></li>
+							<li><a href="#">2011</a></li>
+							<li><a href="#">2012</a></li>
+							</ul>-->
+							
+					<a href="#" data-dropdown="artist-dropdown" class="button split secondary">All Artists<span></span></a>
+					<ul id="artist-dropdown" class="f-dropdown">
+					<input type="text" placeholder="enter surname" id='artistName'>
+					</ul>
+					
+					<a href="#" data-dropdown="category-dropdown" class="button split secondary">All Categories<span></span></a>
+						<ul id="category-dropdown" class="f-dropdown" data-dropdown-content>
+							<li><a href="/gallery-Watercolour">Watercolour</a></li>
+							<li><a href="#">Oil</a></li>
+							<li><a href="#">Drawing</a></li>
+							<li><a href="#">Still life</a></li>
+							<li><a href="#">Portrait</a></li>
+							<li><a href="#">Landscape/Seascape</a></li>
+							<li><a href="#">3D work</a></li>
+							<li><a href="#">Photography</a></li>
+							</ul>
+				</div>
+			</div>
+			
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="pagination-centered">
+				  <ul class="pagination">
+				    <li class="arrow available"><a href="/gallery/page-{{firstPage}}">&laquo;</a></li>
+				    {{#page}}<li><a href="/gallery/page-{{.}}">{{.}}</a></li>{{/page}}
+				    <li class="arrow"><a href="/gallery/page-{{endPage}}">&raquo;</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>	
+
+		<!--<div class="row" id='div_tiles'>
+			 {{#tile}}
+			<div class="medium-4 large-4 columnGallery" >
+				<div class="gallery shadow">
+					<a href="/entry-details-page/{{entryid}}/{{pictureid}}" class="artist-avatar"><img src="{{fileurl}}"></a>
+					<div class="artist-name">
+						<a href="/public/{{firstname}}-{{surname}}" class="username">{{firstname}} {{surname}}</a>
+						<a href="/public" class="artist-username">{{username}}</a>
+					</div>
+					<span class="view-count">{{view_count}} views</span>
+					<a href="/entry-details-page/{{entryid}}/{{pictureid}}" class="photo-tile-title">{{title}}</a>
+					<div class="action">
+						<div data-date="2013-12-06T22:13:37.122Z" class="story-date moment fromNow">Entry: 2012</div>
+						<div class="story-tile-thumbnail"><a href="/entry-details-page/{{entryid}}/{{pictureid}}"><img src="{{fileurl}}"></a></div>
+					</div>
+
+				</div>	
+			</div>
+			{{/tile}} 
+		</div>-->
+
+		<div class="row" id='div_tiles'>
+				<ul class="large-block-grid-5 small-block-grid-3" >
+					{{#tile}}<li><a class="th" href="/entry-details-page/{{entryid}}/{{pictureid}}"><img class="tiles" src="{{fileurl}}" width="150" height="150"></a></li>{{/tile}}
+				</ul>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="pagination-centered">
+				  <ul class="pagination">
+				    <li class="arrow available"><a href="">&laquo;</a></li>
+				    {{#page}}<li><a href="/gallery/page-{{.}}">{{.}}</a></li>{{/page}}
+				    <li class="arrow"><a href="">&raquo;</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>	
+
+
+	</div>
+</div>
+
+

@@ -1,0 +1,84 @@
+{{#contentFor 'headersrc'}}<img src="/assets/img/gallery-hd-ft.jpg" class="bg-header" alt="Seema Gill">{{/contentFor}}
+{{#contentFor 'footersrc'}}<img src="/assets/img/gallery-hd-ft.jpg" class="bg-footer" alt="Seema Gill">{{/contentFor}}
+
+
+	<div class="container-content" style="">
+			<div id="selction-ajax"></div>
+			<div class="row">
+				<div class="small-12 large-12 columns">
+				<h2>Gallery of Finalists' Work</h2>
+				<p> Welcome to EAC’s unique online image archive containing over 1000 works selected for exhibition between the years 2003 and 2012. Click on a thumbnail to open up a larger version. </p> 
+			</div>
+			
+			<div id="selction-ajax"></div>	
+			<div class="row filter-search">
+				<div class="large-12 columns">
+					<a href="#" data-dropdown="year-dropdown" class="button split secondary">2012<span></span></a>
+							<!--<ul id="year-dropdown" class="f-dropdown" data-dropdown-content>
+							<li><a href="#">2003</a></li>
+							<li><a href="#">2004</a></li>
+							<li><a href="#">2005</a></li>
+							<li><a href="#">2006</a></li>
+							<li><a href="#">2007</a></li>
+							<li><a href="#">2008</a></li>
+							<li><a href="#">2009</a></li>
+							<li><a href="#">2011</a></li>
+							<li><a href="#">2012</a></li>
+							</ul>-->
+					
+					<a href="#" data-dropdown="artist-dropdown" class="button split secondary">All Artists<span></span></a>
+					<ul id="artist-dropdown" class="f-dropdown" data-dropdown-content>
+						<input type="text" placeholder="Enter artist name" name="artist" id="artistList">
+						<!-- <input type="text" name="artist" id="autocomplete-ajax-x" disabled="disabled" style="color: #CCC; position: absolute; background: transparent; z-index: 1;"/> -->
+						
+					</ul>
+					
+					<a href="#" data-dropdown="category-dropdown" class="button split secondary">All Categories<span></span></a>
+						<ul id="category-dropdown" class="f-dropdown" data-dropdown-content>
+							<li><a href="/gallery-Watercolour">Watercolour</a></li>
+							<li><a href="#">Oil</a></li>
+							<li><a href="#">Drawing</a></li>
+							<li><a href="#">Still life</a></li>
+							<li><a href="#">Portrait</a></li>
+							<li><a href="#">Landscape/Seascape</a></li>
+							<li><a href="#">3D work</a></li>
+							<li><a href="#">Photography</a></li>
+							</ul>
+				</div>
+			</div>
+			
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="pagination-centered">
+				  <ul class="pagination">
+				    <li class="arrow available"><a href="/gallery/page-{{firstPage}}">&laquo;</a></li>
+				    {{#page}}<li><a href="/gallery/page-{{.}}">{{.}}</a></li>{{/page}}
+				    <li class="arrow"><a href="/gallery/page-{{endPage}}">&raquo;</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>	
+
+		<div class="row" id='div_tiles'>
+				<ul class="large-block-grid-5 small-block-grid-3" >
+					{{#tile}}<li><a class="th" href="/entry-details-page/{{entryid}}/{{pictureid}}"><img class="tiles" src="{{fileurl}}" width="150" height="150"></a></li>{{/tile}}
+				</ul>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<div class="pagination-centered">
+				  <ul class="pagination">
+				    <li class="arrow available"><a href="">&laquo;</a></li>
+				    {{#page}}<li><a href="/gallery/page-{{.}}">{{.}}</a></li>{{/page}}
+				    <li class="arrow"><a href="">&raquo;</a></li>
+				  </ul>
+				</div>
+			</div>
+		</div>	
+
+
+	</div>
+</div>
+
+

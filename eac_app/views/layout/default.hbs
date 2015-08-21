@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon"/>
+    {{> assets}}
+
+    
+  </head>
+  <body>
+    <div class="container-wrap">
+      <div class="row border">
+        {{> header}}
+        {{{body}}}
+        {{> footer}}           
+        {{> scripts}} 
+       
+      </div>
+    </div>
+  </body>
+</html>

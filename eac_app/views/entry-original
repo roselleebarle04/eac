@@ -1,0 +1,173 @@
+{{#contentFor 'headersrc'}}<img src="/assets/img/home-hd-ft.jpg" class="bg-header" alt="Seema Gill">{{/contentFor}}
+{{#contentFor 'footersrc'}}<img src="/assets/img/home-hd-ft.jpg" class="bg-footer" alt="Artwork from EAC competition">{{/contentFor}}
+  
+	<div class="container-content">
+		<div class="row">
+			<div class="small-12 large-12 columns">
+				<p class="text-center"> <strong>Apply online in two steps below</strong> or download the <a href="/enter">Application Form</a> <img src="assets/css/DownloadPDF.png"> </p>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="small-12 large-6 columns upload-photo"> 
+			<div class="numberCircle">I</div>
+			<a href="#" data-reveal-id="photoUpload">
+				<div class="upload button">
+					<p style="position:absolute; float:left; top:10px; font-weight:bolder;">* Upload Your Photos 
+					</p>
+				</div>
+			</a>
+			<img style="position:relative; right:80px; top:-50px" src="assets/css/addphoto.png">
+			<br><br>
+				<p style="margin-bottom:5px;"><a href="">Sunshine in New Zealand</a>		</p>
+				<p style="margin-bottom:5px;"><a href="">Marg Millington Bungy Jump</a>	</p>
+				<p style="margin-bottom:5px;"><a href="">England, Raining... Again</a>	</p>
+
+				<p class="pound">*&pound;5 Per Photo</p>
+		</div>
+
+		<div style="border-left :1px solid #ddd;" class="small-12 large-6 columns upload-photo-right">
+			<div class="numberCircle">2</div>
+			<div class="app">
+				<div class="panel">
+					<div class="yield">
+						<form class="state default-checkout" action="" method="POST" id="payment-form">
+							<div class="checkout-step" style="display: block; opacity: 1; -webkit-transition: none; transition: none;">
+							 	<div class="email" style="display: block; top: 9px; opacity: 1; -webkit-transition: none; transition: none; -webkit-transform: translateY(0px);">
+							  		<label for="paymentEmail"> Email </label>
+							  		<input type="email" id="paymentEmail" value="" autocompletetype="email" autocorrect="off" spellcheck="off" name="email" required="">
+							  		</input>
+							  	</div>
+							  	<div class="payment" style="display: block; top: 77px; opacity: 1; -webkit-transition: none; transition: none; -webkit-transform: translateY(0px);">
+								  	<div class="number">
+									  <label for="paymentNumber">Card number</label>
+									  <input type="tel" id="paymentNumber" name="card_number" data-placeholder="Card number" autocompletetype="cc-number" required="" data-numeric="" class="placeholder">
+									  <div class="placeholder"></div>
+									  <div class="type"></div>
+									</div>
+
+									<div class="expiry">
+									  <label for="paymentExpiry">Expires</label>
+									  <input type="text" id="paymentExpiry" name="cc-exp" autocompletetype="cc-exp" maxlength="9" pattern="\d*" data-numeric="" required="" placeholder="MM / YY">
+									</div>
+
+									<div class="cvc">
+									  <label for="paymentCVC">Card code</label>
+									  <input type="tel" id="paymentCVC" name="cc-csc" autocompletetype="cc-csc" maxlength="4" pattern="\d*" autocomplete="off" data-numeric="" required="" placeholder="CVC">
+									</div>
+								</div>
+								<div class="remember-me" style="display: block; top: 235px; opacity: 1; -webkit-transition: none; transition: none; -webkit-transform: translateY(0px);">
+									<div class="checkbox">
+				  						<input type="checkbox" id="remember-me">
+				  						<label class="label-remember-me" for="remember-me" style="display: block; opacity: 1; -webkit-transition: none; transition: none;">Remember me</label>
+									</div>
+								</div>
+
+								<div class="button" style="top: 275px; -webkit-transition: none; transition: none; -webkit-transform: translateY(0px); margin-bottom:0px;">
+									Pay $20.00
+								</div>
+							</div>
+						</form>
+					</div><img style="position:absolute; right:22px; bottom:25px; " src="assets/css/secure.png"> 	
+				</div>	
+				
+			
+			<!--<div class="app">
+				<div class="panel">
+					<div class="yield">
+						<form action="/thank-you" method="POST" id="payment-form">
+						  <span class="payment-errors"></span>
+						  <div class="form-row">
+						    <label>
+						      <span>Email</span>
+						      <input type="text" size="20" data-stripe="email"/>
+						    </label>
+						  </div>
+						  <div class="form-row">
+						    <label>
+						      <span>Card Number</span>
+						      <input type="text" size="20" data-stripe="card-number"/>
+						    </label>
+						  </div>
+
+						  <div class="form-row">
+						    <label>
+						      <span>CVC</span>
+						      <input type="text" size="4" data-stripe="card-cvc"/>
+						    </label>
+						  </div>
+
+						  <div class="form-row">
+						    <label>
+						      <span>Expiration (MM)</span>
+						      <input type="text" size="2" data-stripe="card-exp-month"/>
+						    <br>
+						    <span>Expiration (YYYY) </span>
+						    <input type="text" size="4" data-stripe="card-exp-year"/>
+						    </label>
+						  </div>
+						  <br>
+						  <button class="submit-button" type="submit">Pay $20</button>
+						</form>
+					</div><img style="position:absolute; right:22px; bottom:25px; " src="assets/css/secure.png"> 	
+				</div>	-->
+				
+			</div>
+		</div> <!-- div small-12 large 6 end tag -->
+	</div>
+
+				<div id="photoUpload" class="reveal-modal small" data-reveal>
+					<form action="/upload" enctype="multipart/form-data" method="post">
+				    	<input type="text" placeholder="Title of Entry" name="title"><br>
+				    	<input type="file" name="image" multiple="multiple"><br>
+				    	<input type="submit" value="Upload">
+			    	</form>
+			    	<!--<div class="image-preview">
+			    		<img src="/image.png" />
+			    	</div>-->
+			   		<a class="close-reveal-modal">&#215;</a>
+			  	</div>
+
+<script type="text/javascript">
+// Set your secret key: remember to change this to your live secret key in production
+// See your keys here https://manage.stripe.com/account
+stripe.setApiKey("pk_test_o4IFZsyJClip9ONTLx5Cs8QV");
+
+// (Assuming you're using express - expressjs.com)
+// Get the credit card details submitted by the form
+var stripeToken = request.body.stripeToken;
+
+var charge = stripe.charges.create({
+amount: 20, // amount in cents, again
+currency: "usd",
+card: stripeToken,
+description: "payinguser@example.com"
+}, function(err, charge) {
+	if (err && err.type === 'StripeCardError') {
+// The card has been declined
+}
+});
+
+stripe.customers.create({
+	card: stripeToken,
+	description: 'payinguser@example.com'
+}).then(function(customer) {
+	return stripe.charges.create({
+amount: 1000, // amount in cents, again
+currency: 'usd',
+customer: customer.id
+});
+}).then(function(charge) {
+	saveStripeCustomerId(user, customer.id);
+});
+
+// Later...
+var customerId = getStripeCustomerId(user);
+
+stripe.charges.create({
+amount: 1500, // amount in cents, again
+currency: 'usd',
+customer: customer.id
+});
+</script>
